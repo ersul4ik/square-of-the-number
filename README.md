@@ -1,2 +1,8 @@
-# square-of-the-number
+# Square-of-the-number
+
 The simple realization of getting square of given number through API
+
+## Roadmap
+
+- [] Choose the right development tools.
+- []
