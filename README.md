@@ -8,8 +8,17 @@ The simple realization of getting square of given number through API
 - [x] Write a first endpoint.
 - [x] Configure a celery instance
 - [x] Write a celery task to calculate square of the selected number
-- [ ] Add a tool for monitoring celery tasks and workers
+- [x] Add a tool for monitoring celery tasks and workers
 - [ ] Cover a feature by tests
-- [ ] Set up existing feature inside docker
+- [x] Set up existing feature inside docker
 
 ## How it works
+
+### Developer commands
+
+- `make run`. Use this command if you have to use API.
+- `make clear`. If you have to finish working on.
+
+### API
+Please open http://127.0.0.1:5050/docs to get to know about existing endpoints
+
