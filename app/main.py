@@ -1,3 +1,5 @@
+import math
+
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from fastapi import FastAPI, Request, status
@@ -17,4 +19,4 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 def get_square(number: int):
     if number <= 0:
         return JSONResponse(content={'msg': 'The number should be greater than 0'}, status_code=400)
-    return JSONResponse(content={'msg': number})
+    return JSONResponse(content={'msg': 'success', 'result': math.sqrt(number)})
