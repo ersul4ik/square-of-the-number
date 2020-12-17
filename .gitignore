@@ -1,0 +1,23 @@
+*.pyc
+.idea/
+.env
+.DS_Store
+.vscode
+.coverage
+staticfiles/
+busgo/media
+node_modules/
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Coverage
+htmlcov/
+.coverage.*
+coverage.xml
+*.cover
