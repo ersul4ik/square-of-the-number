@@ -9,5 +9,5 @@ app = FastAPI()
 @app.get('/square')
 def get_square(number: int):
     if number <= 0:
-        return JSONResponse(content={'message': 'The number should be greater than 0'}, status_code=400)
-    return JSONResponse(content={'message': number})
+        return JSONResponse(content={'msg': 'The number should be greater than 0'}, status_code=400)
+    return JSONResponse(content={'msg': number})
