@@ -1,8 +1,15 @@
 from fastapi.testclient import TestClient
+from unittest import mock
 
 from app.main import app
 
 client = TestClient(app)
+
+
+class MockCeleryTask:
+    @property
+    def id(self):
+        return 1
 
 
 def test_should_return_error_when_number_is_less_than_zero():
@@ -18,6 +25,9 @@ def test_should_return_error_when_number_is_not_integer():
 
 
 def test_should_return_square_when_number_is_valid():
-    response = client.get('/square', params={'number': 4})
+    with mock.patch('app.main.celery.send_task') as task:
+        task.return_value = MockCeleryTask()
+        response = client.get('/square', params={'number': 4})
+
     assert response.status_code == 200
-    assert response.json() == {'msg': 'success', 'result': 2}
+    assert response.json() == {'msg': 'success', 'id': 1}
