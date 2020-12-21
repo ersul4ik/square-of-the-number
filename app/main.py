@@ -1,13 +1,13 @@
 import json
-import os
 
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from fastapi import FastAPI, Request, status
+
+from app.settings import HOST_URL
 from cron.worker import celery
 
 app = FastAPI()
-HOST_URL = os.getenv('HOST_URL', 'http://127.0.0.1:5050')
 
 
 @app.exception_handler(RequestValidationError)
