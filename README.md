@@ -16,6 +16,9 @@ The simple realization of getting square of given number through API
 
 ### Developer commands
 
+- You need a docker and docker-compose on your machine.
+   - https://docs.docker.com/engine/install/ubuntu/
+    - https://docs.docker.com/compose/install/
 - `make run`. Use this command if you have to use API.
 - `make clear`. If you had to finish working on.
 
