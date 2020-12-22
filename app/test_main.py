@@ -30,4 +30,4 @@ def test_should_return_square_when_number_is_valid():
         response = client.get('/square', params={'number': 4})
 
     assert response.status_code == 200
-    assert response.json() == {'msg': 'success', 'id': 1}
+    assert response.json() == {'msg': 'success', 'id': 1, 'result_url': 'http://127.0.0.1:5050/task/1'}

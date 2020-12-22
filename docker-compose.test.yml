@@ -5,8 +5,7 @@ services:
     build:
       context: .
       dockerfile: config/api.Dockerfile
-    container_name: fastapi
-    entrypoint: uvicorn app.main:app --host 0.0.0.0 --port 8080
+    entrypoint: pytest app/
     environment:
       REDIS_SERVER: redis://redis:6379
     ports:
@@ -25,11 +24,3 @@ services:
 
   redis:
     image: redis:5.0.5-alpine
-
-  flower:
-    image: mher/flower
-    command: ["flower", "--broker=redis://redis:6379", "--port=5555"]
-    ports:
-      - "5555:5555"
-    depends_on:
-      - redis
