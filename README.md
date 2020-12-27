@@ -11,6 +11,7 @@ The simple realization of getting square of given number through API
 - [x] Add a tool for monitoring celery tasks and workers
 - [x] Cover a feature by tests
 - [x] Set up existing feature inside docker
+- [ ] Add a database tools.
 
 ## How it works
 
